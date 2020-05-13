@@ -56,26 +56,15 @@ make -j$(($(nproc) + 1)) V=s
 
 编译完成后输出路径：/lede/bin/targets
 
+编译完成，可以在 lede/bin/targets/ramips/mt7621 下找到编译生成的文件，我们需要的是 openwrt-ramips-mt7621-k2p-initramfs-kernel.bin 和 openwrt-ramips-mt7621-k2p-squashfs-sysupgrade.bin 这两个文件。首先在 breed 下刷入 kernel 镜像，闪存布局选择 “斐讯 0xA0000”，然后重启登录 LuCI 之后再通过系统 - 备份 / 升级，不保留配置刷入 sysupgrade 镜像，等待重启，笔者当时刷写的时候选的公版也没翻车（大雾示范）。（其实如果只有一个镜像的话直接 breed 刷 sysupgrade 镜像就可以了）
+
+Update 2019/8/13: 关于固件刷写，Opboot 和 breed 有所不同，参考恩山的这篇帖子，breed 直接刷 squashfs-sysupgrade, opboot 先刷 initramfs-kernel，开机后再从系统里刷 squashfs-sysupgrade。
+
 特别提示：
 ------
 1.源代码中绝不含任何后门和可以监控或者劫持你的 HTTPS 的闭源软件，SSL 安全是互联网最后的壁垒。安全干净才是固件应该做到的；
 
 2.如有技术问题需要讨论，欢迎加入 QQ 讨论群：OP共享技术交流群 ,号码 297253733 ，加群链接: 点击链接加入群聊【OP共享技术交流群】：[点击加入](https://jq.qq.com/?_wv=1027&k=5yCRuXL "OP共享技术交流群")
-
-3.想学习OpenWrt开发，但是摸不着门道？自学没毅力？基础太差？怕太难学不会？跟着佐大学OpenWrt开发入门培训班助你能学有所成
-报名地址：[点击报名](http://forgotfun.org/2018/04/openwrt-training-2018.html "报名")
-
-## Donate
-
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
-### Alipay 支付宝
-
-![alipay](doc/alipay_donate.jpg)
-
-### Wechat 微信
-
-![wechat](doc/wechat_donate.jpg)
 
 ------
 
