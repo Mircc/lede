@@ -68,6 +68,9 @@ Update 2019/8/13: 关于固件刷写，Opboot 和 breed 有所不同，参考恩
 ------
 如需安装https则
 进入LUCI-collection，选择luci-ssl-openssl（按Y，后面一样）
+如需定制ddns，默认情况下 Open­Wrt 中并没有 Cloud­flare DDNS 功能，需要在编译时选择相应的组件，其位置在
+Network→IP Addresses and Names
+
 
 
 English Version: How to make your Openwrt firmware.
