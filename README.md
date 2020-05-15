@@ -65,8 +65,10 @@ Update 2019/8/13: 关于固件刷写，Opboot 和 breed 有所不同，参考恩
 1.源代码中绝不含任何后门和可以监控或者劫持你的 HTTPS 的闭源软件，SSL 安全是互联网最后的壁垒。安全干净才是固件应该做到的；
 
 2.如有技术问题需要讨论，欢迎加入 QQ 讨论群：OP共享技术交流群 ,号码 297253733 ，加群链接: 点击链接加入群聊【OP共享技术交流群】：[点击加入](https://jq.qq.com/?_wv=1027&k=5yCRuXL "OP共享技术交流群")
-
 ------
+如需安装https则
+进入LUCI-collection，选择luci-ssl-openssl（按Y，后面一样）
+
 
 English Version: How to make your Openwrt firmware.
 -
